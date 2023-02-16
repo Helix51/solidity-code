@@ -1,64 +1,60 @@
-//SPDX-license-Identifier: UNLICENSED
-pragma solidity ^0.8.0;
+//SPDX-License-Identifier: UNLICENSED
 
-contract SimpleContract {
-    // State variable of type uint (unsigned integer)
-    uint private stateVariable1;
+pragma solidity ^0.8.4;
+ 
+ contract ReadWrite{
 
-    // State variable of type string
-    string private stateVariable2;
+     // four main types of variables in  solidity are integer,boolean,string,adress
+     uint num;
+     function get1() public view returns(uint){
+         //reading a variable
+         return num;
 
-    // Local variable of type address
-    address private localVariable1;
+     }
+     function set1(uint _num) public {
+         // write a variable
+         num = _num;
+     }
 
-    // Local variable of type bool (boolean)
-    bool private localVariable2;
+     
+     
+     
+     string str;
+     function get2() public view returns(string memory){
+         //reading a string
+         return str;
+     }
 
-    // Constructor to set initial values for state variables
-    constructor() public {
-        stateVariable1 = 42;
-        stateVariable2 = "Hello World";
-        localVariable1 = msg.sender;
-        localVariable2 = true;
-    }
+     function set2(string memory strn) public {
+         // writing a new string
+         str = strn;
+     }
 
-    // Getter function for stateVariable1
-    function getStateVariable1() public view returns (uint) {
-        return stateVariable1;
-    }
 
-    // Setter function for stateVariable1
-    function setStateVariable1(uint newValue) public {
-        stateVariable1 = newValue;
-    }
 
-    // Getter function for stateVariable2
-    function getStateVariable2() public view returns (string memory) {
-        return stateVariable2;
-    }
 
-    // Setter function for stateVariable2
-    function setStateVariable2(string memory newValue) public {
-        stateVariable2 = newValue;
-    }
+     bool bol;
+     function get3() public view returns(bool){
+         //reading a boolean
+         return bol;
+     }
 
-    // Getter function for localVariable1
-    function getLocalVariable1() public view returns (address) {
-        return localVariable1;
-    }
+     function set3(bool boli) public {
+         // writing a new boolean
+         bol = boli;
+     }
 
-    // Setter function for localVariable1
-    function setLocalVariable1(address newValue) public {
-        localVariable1 = newValue;
-    }
 
-    // Getter function for localVariable2
-    function getLocalVariable2() public view returns (bool) {
-        return localVariable2;
-    }
 
-    // Setter function for localVariable2
-    function setLocalVariable2(bool newValue) public {
-        localVariable2 = newValue;
-    }
-}
+
+     address adrs;
+     function get4() public view returns(address){
+         //reading an address
+         return adrs;
+     }
+
+     function set4(address adrss) public {
+         // writing a new address
+         adrs = adrss;
+     }
+ }
