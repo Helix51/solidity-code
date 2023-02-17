@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: UNLICENSED
-pragma solidity ^0.8.17;
+pragma solidity ^0.8.4;
 
 contract IfElse {
     function foo(uint x) public pure returns (uint) {
